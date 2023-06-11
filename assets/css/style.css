@@ -1,0 +1,278 @@
+:root {
+  --mainColor: #393e46;
+  --secondaryColor: #3e434e;
+  --contentColor: #ffd369;
+  --fontColor: #fbfbfb;
+  --colorLight: #ffffff;
+}
+
+body {
+  background-color: var(--mainColor);
+  min-height: 90vh;
+  font-family: 'roboto';
+}
+
+/* navbar */
+
+.navbar {
+  background-color: transparent;
+  padding-top: 40px;
+  height: 10vh;
+}
+
+.menu {
+  display: none;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
+
+.navbar-collapse {
+  font-size: 14px;
+  color: var(--fontColor) !important;
+}
+
+.active {
+  color: var(--contentColor) !important;
+  font-weight: bold;
+}
+
+/* end Navbar */
+
+.btn {
+  padding: 15px;
+  border-radius: 10px;
+  color: var(--mainColor);
+  background-color: var(--contentColor);
+}
+
+.judul h2 {
+  color: var(--fontColor);
+}
+.judul h1 {
+  color: var(--contentColor);
+}
+
+/* hero */
+
+.scroll {
+  font-size: small;
+  color: #ffd369;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.scroll:hover {
+  padding-top: 3px;
+}
+/* end hero */
+
+/* Timeline */
+
+.main-timeline {
+  overflow: hidden;
+  position: relative;
+}
+
+.main-timeline:before {
+  content: '';
+  width: 5px;
+  height: 60%;
+  background: var(--contentColor);
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-timeline .timeline {
+  width: 50%;
+  height: 200px;
+  padding-left: 100px;
+  float: right;
+  position: relative;
+}
+.main-timeline .timeline:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--contentColor);
+  position: absolute;
+  top: 20%;
+  left: -10px;
+  transform: translateY(-50%);
+}
+.main-timeline .timeline-content {
+  display: block;
+  padding-left: 150px;
+  position: relative;
+}
+
+.main-timeline .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--fontColor);
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+.main-timeline .description {
+  font-size: 14px;
+  color: var(--fontColor);
+  margin: 0 0 5px 0;
+}
+.main-timeline .timeline:nth-child(2n) {
+  padding: 0 100px 0 0;
+}
+.main-timeline .timeline:nth-child(2n):before,
+.main-timeline .timeline:nth-child(2n) .timeline-content:before,
+.main-timeline .timeline:nth-child(2n) .year {
+  left: auto;
+  right: -10px;
+}
+.main-timeline .timeline:nth-child(2n) .timeline-content {
+  padding: 0 150px 0 0;
+}
+.main-timeline .timeline:nth-child(2n) .timeline-content:before {
+  right: -92px;
+}
+.main-timeline .timeline:nth-child(2n) .year {
+  right: 0;
+}
+
+.main-timeline .timeline:nth-child(2) {
+  margin-top: 110px;
+}
+.main-timeline .timeline:nth-child(odd) {
+  margin: -110px 0 0 0;
+}
+.main-timeline .timeline:nth-child(even) {
+  margin-bottom: 80px;
+}
+.main-timeline .timeline:first-child,
+.main-timeline .timeline:last-child:nth-child(even) {
+  margin: 0;
+}
+
+/* Timeline end */
+
+/* Skills */
+
+.skills {
+  color: var(--fontColor);
+}
+
+/* Skills end */
+
+/* Portofolio */
+.corosel {
+  display: flex;
+  align-items: center;
+}
+
+.textcoro {
+}
+
+/* Portofolio End */
+
+/* footer */
+
+footer {
+  background-color: var(--contentColor);
+  color: var(--mainColor);
+  /* height: 300px; */
+}
+
+.btn-sosmed {
+  height: 40px;
+  width: 40px;
+  background-color: var(--mainColor);
+  color: var(--contentColor);
+  margin-right: 20px;
+}
+
+/* footer end */
+
+input {
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid var(--contentColor);
+  font-size: small;
+}
+
+textarea {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  resize: none;
+  border: solid var(--contentColor);
+  font-size: small;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: #2f343d;
+    width: 100%;
+    padding: 20px;
+    height: 10vh;
+    z-index: 4;
+    left: -20;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--fontColor);
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+
+  .judskil {
+    text-align: center;
+  }
+
+  .textcoro {
+    margin-left: 15vw;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .bg-pp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .sosmed {
+    display: none;
+  }
+
+  .judskil {
+    text-align: center;
+  }
+
+  .corosel {
+    display: auto;
+  }
+
+  .bg-pp {
+    display: none;
+  }
+}
